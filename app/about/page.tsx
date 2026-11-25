@@ -17,15 +17,15 @@ const facts = [
 export default function AboutPage() {
   return (
     <>
-      <section className="pt-10 md:pt-16">
+      <section className="pt-10 md:pt-20">
         <Container>
           <p className="eyebrow">About</p>
-          <div className="mt-6 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12">
+          <div className="mt-6 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16">
             <div>
-              <h1 className="display text-[44px] md:text-[56px] max-w-[560px]">
+              <h1 className="display text-[44px] md:text-[60px] max-w-[560px]">
                 A small agency that cuts out busywork.
               </h1>
-              <div className="mt-8 space-y-5 text-[16px] text-[color:var(--color-muted)] leading-relaxed max-w-[520px]">
+              <div className="mt-8 space-y-5 text-[16px] text-[color:var(--color-muted)] leading-[1.6] max-w-[520px]">
                 <p>
                   We work with small and mid-sized businesses to cut the manual
                   work out of their operations — connecting the tools they
@@ -39,7 +39,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="rounded-2xl bg-white border border-[color:var(--color-border)] p-7 md:p-8 h-fit">
+            <div className="card-surface rounded-2xl p-7 md:p-8 h-fit">
               <dl className="divide-y divide-[color:var(--color-border)]">
                 {facts.map((f) => (
                   <div key={f.label} className="py-4 first:pt-0 last:pb-0">

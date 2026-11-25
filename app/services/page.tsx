@@ -44,10 +44,10 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
-      <section className="pt-10 md:pt-16">
+      <section className="pt-10 md:pt-20">
         <Container>
           <p className="eyebrow">Services</p>
-          <h1 className="display mt-6 text-[48px] md:text-[60px] max-w-[760px]">
+          <h1 className="display mt-6 text-[48px] md:text-[64px] max-w-[760px]">
             Less typing, chasing and double-checking.
           </h1>
         </Container>
@@ -59,21 +59,25 @@ export default function ServicesPage() {
             {services.map((s) => (
               <div
                 key={s.n}
-                className="grid grid-cols-1 md:grid-cols-[72px_1fr_1fr] gap-6 md:gap-10 py-10"
+                className="grid grid-cols-1 md:grid-cols-[72px_1fr_1fr] gap-6 md:gap-10 py-12"
               >
-                <p className="text-[13px] text-[color:var(--color-muted)]">{s.n}</p>
+                <p className="text-[13px] text-[color:var(--color-muted)] font-mono">
+                  {s.n}
+                </p>
                 <div>
-                  <h2 className="text-[22px] md:text-[24px] font-semibold tracking-tight">
+                  <h2 className="text-[22px] md:text-[26px] font-semibold tracking-tight">
                     {s.title}
                   </h2>
-                  <p className="mt-3 text-[15px] text-[color:var(--color-muted)] leading-relaxed max-w-[380px]">
+                  <p className="mt-3 text-[15px] text-[color:var(--color-muted)] leading-[1.6] max-w-[380px]">
                     {s.body}
                   </p>
                 </div>
-                <ul className="space-y-2.5 text-[14.5px]">
+                <ul className="space-y-3 text-[14.5px]">
                   {s.bullets.map((b) => (
                     <li key={b} className="flex items-start gap-3">
-                      <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[color:var(--color-accent)] shrink-0" />
+                      <span className="mt-1.5 inline-flex h-4 w-4 items-center justify-center rounded-full bg-[color:var(--color-accent)]/15 shrink-0">
+                        <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--color-accent-deep)]" />
+                      </span>
                       <span>{b}</span>
                     </li>
                   ))}

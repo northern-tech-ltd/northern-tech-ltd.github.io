@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
-import { Inter, Inter_Tight } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const inter = Inter({
+const geist = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
 });
 
-const interTight = Inter_Tight({
+const geistDisplay = Geist({
   subsets: ["latin"],
   variable: "--font-display",
+  display: "swap",
+  weight: ["500", "600", "700"],
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
   display: "swap",
 });
 
@@ -41,7 +48,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-GB" className={`${inter.variable} ${interTight.variable}`}>
+    <html
+      lang="en-GB"
+      className={`${geist.variable} ${geistDisplay.variable} ${geistMono.variable}`}
+    >
       <body>
         <div className="min-h-screen flex flex-col">
           <Header />

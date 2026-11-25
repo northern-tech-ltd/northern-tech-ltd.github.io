@@ -20,7 +20,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-2xl bg-white border border-[color:var(--color-border)] p-7 md:p-8"
+      className="card-surface rounded-2xl p-7 md:p-8"
     >
       <label className="block">
         <span className="text-[13px] text-[color:var(--color-muted)]">
@@ -30,7 +30,7 @@ export default function ContactForm() {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="mt-2 block w-full rounded-lg border border-[color:var(--color-border)] bg-white px-3.5 py-2.5 text-[14.5px] outline-none focus:border-[color:var(--color-dark)]"
+          className="mt-2 block w-full rounded-lg border border-[color:var(--color-border)] bg-white px-3.5 py-2.5 text-[14.5px] outline-none focus:border-[color:var(--color-dark)] focus:ring-2 focus:ring-[color:var(--color-dark)]/10 transition"
         />
       </label>
 
@@ -42,13 +42,13 @@ export default function ContactForm() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           rows={5}
-          className="mt-2 block w-full rounded-lg border border-[color:var(--color-border)] bg-white px-3.5 py-2.5 text-[14.5px] outline-none focus:border-[color:var(--color-dark)] resize-none"
+          className="mt-2 block w-full rounded-lg border border-[color:var(--color-border)] bg-white px-3.5 py-2.5 text-[14.5px] outline-none focus:border-[color:var(--color-dark)] focus:ring-2 focus:ring-[color:var(--color-dark)]/10 transition resize-none"
         />
       </label>
 
       <button
         type="submit"
-        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[color:var(--color-dark)] text-white px-5 py-3 text-[14.5px] font-medium hover:bg-[color:var(--color-dark-2)] transition"
+        className="pill-dark mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl px-5 py-3.5 text-[14.5px] font-medium"
       >
         Send message
         <span aria-hidden>→</span>
